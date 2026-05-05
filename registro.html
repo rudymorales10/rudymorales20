@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <title>Sonimotor GT | Cotización</title>
+</head>
+<body class="pagina-motos">
+   <input type="checkbox" id="menu-toggle">
+
+  <ul class="menu-panel">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="motos.html">Motos</a></li>
+    <li><a href="repuestos.html">Repuestos</a></li>
+    <li><a href="instrumentos.html">Instrumentos</a></li>
+    <li><a href="registro.html">Cotización</a></li>
+  </ul>
+
+  <nav class="navbar">
+    <span class="marca">SONIMOTOR GT</span>
+    <label class="menu-btn" for="menu-toggle">☰</label>
+    <ul class="menu-escritorio">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="motos.html">Motos</a></li>
+      <li><a href="repuestos.html">Repuestos</a></li>
+      <li><a href="instrumentos.html">Instrumentos</a></li>
+      <li><a href="registro.html">Cotización</a></li>
+    </ul>
+  </nav>
+  <!-- Copia la misma NAVBAR aquí -->
+
+  <div class="contenedor-formulario">
+    <h2>Formulario de Cotización</h2>
+    <form class="mi-formulario">
+      <label>Nombre del Cliente:</label>
+      <input type="text" placeholder="Tu nombre completo" required>
+
+      <label>Correo Electrónico:</label>
+      <input type="email" placeholder="correo@ejemplo.com" required>
+
+      <label>Producto de Interés:</label>
+      <select required>
+        <option value="">-- Seleccione un producto --</option>
+        <option value="moto">Motocicleta Yamaha</option>
+        <option value="repuesto">Repuestos Originales</option>
+        <option value="instrumento">Instrumento Musical</option>
+      </select>
+
+      <label>Tipo de Pago:</label>
+      <select>
+        <option value="contado">Efectivo / Contado</option>
+        <option value="tarjeta">Tarjeta de Crédito</option>
+        <option value="visacuotas">Visacuotas</option>
+      </select>
+
+      <button type="submit" class="btn-enviar">Enviar a Sonimotor GT</button>
+    </form>
+  </div>
+</body>
+</html>
