@@ -255,3 +255,15 @@ body {
     min-height: 80vh;
     padding: 20px;
 }
+@media (max-width: 600px) {
+    /* Esto esconde los enlaces de texto (Inicio, Motos, Repuestos) */
+    nav a {
+        display: none; 
+    }
+
+    /* Esto asegura que el icono de las tres rayitas sea el que se vea */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
