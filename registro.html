@@ -3,11 +3,14 @@
 <head>
   <link rel="stylesheet" href="estilos.css">
   <meta charset="UTF-8">
+  <!-- Esta línea es vital para que se vea bien en el celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sonimotor GT | Cotización</title>
 </head>
 <body class="pagina-motos">
-   <input type="checkbox" id="menu-toggle">
+  <input type="checkbox" id="menu-toggle">
 
+  <!-- Menú lateral para celular -->
   <ul class="menu-panel">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="motos.html">Motos</a></li>
@@ -16,6 +19,7 @@
     <li><a href="registro.html">Cotización</a></li>
   </ul>
 
+  <!-- Barra de navegación -->
   <nav class="navbar">
     <span class="marca">SONIMOTOR GT</span>
     <label class="menu-btn" for="menu-toggle">☰</label>
@@ -27,33 +31,35 @@
       <li><a href="registro.html">Cotización</a></li>
     </ul>
   </nav>
-  <!-- Copia la misma NAVBAR aquí -->
 
   <div class="contenedor-formulario">
     <h2>Formulario de Cotización</h2>
-    <form class="mi-formulario">
+    
+    <!-- Formulario conectado a tu Formspree -->
+    <form action="https://formspree.io/f/xykojbwz" method="POST" class="mi-formulario">
+      
       <label>Nombre del Cliente:</label>
-      <input type="text" placeholder="Tu nombre completo" required>
+      <input type="text" name="nombre_cliente" placeholder="Tu nombre completo" required>
+
+      <label>Número de Teléfono:</label>
+      <input type="tel" name="telefono" placeholder="Ej: 5555-4444" required>
 
       <label>Correo Electrónico:</label>
-      <input type="email" placeholder="correo@ejemplo.com" required>
+      <input type="email" name="email_cliente" placeholder="correo@ejemplo.com" required>
 
       <label>Producto de Interés:</label>
-      <select required>
-        <option value="">-- Seleccione un producto --</option>
-        <option value="moto">Motocicleta Yamaha</option>
-        <option value="repuesto">Repuestos Originales</option>
-        <option value="instrumento">Instrumento Musical</option>
-      </select>
+      <input type="text" name="nombre_cliente" placeholder="Escribe lo que necesites." required>
+
 
       <label>Tipo de Pago:</label>
-      <select>
+      <select name="metodo_pago">
         <option value="contado">Efectivo / Contado</option>
         <option value="tarjeta">Tarjeta de Crédito</option>
         <option value="visacuotas">Visacuotas</option>
       </select>
 
       <button type="submit" class="btn-enviar">Enviar a Sonimotor GT</button>
+      
     </form>
   </div>
 </body>
