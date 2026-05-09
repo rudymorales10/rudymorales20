@@ -1,160 +1,70 @@
-/* VARIABLES DE COLOR */
+/* 1. VARIABLES DE COLOR (Únicas y organizadas) */
 :root {
-  --azul: #003594;
-  --rojo: #e60000;
+  --azul: #03225b;
+  --azul-brillante: #0c67c3;
+  --rojo: #ca0e0e;
   --negro: #1a1a1a;
   --blanco: #ffffff;
   --gris: #f4f4f4;
+  --sombra-roja: rgba(230, 0, 0, 0.5);
 }
 
-/* --- CONFIGURACIÓN DE FONDOS POR PÁGINA --- */
-
-/* 1. Fondo de INICIO (Tu imagen de WhatsApp) */
-.pagina-inicio {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('img/WhatsApp Image 2026-05-04 at 10.33.23 AM_3.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-/* 2. Fondo de MOTOS (Negro sólido) */
-.pagina-motos {
-    background-color: #000000 !important;
-}
-
-/* 3. Fondo de COTIZACIÓN (Azul y Rojo) */
-.pagina-registro {
-    background: linear-gradient(135deg, #2d8ded 0%, #800000 100%);
-    background-attachment: fixed;
-}
-
-/* --- ESTILOS GENERALES --- */
+/* 2. ESTILOS GENERALES */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding-top: 80px; /* Evita que la barra fija tape el contenido */
+  padding-top: 80px; /* Espacio para la navbar fija */
   color: var(--blanco);
+  background-color: #000; /* Fondo base negro */
 }
 
-/* NAVBAR FIJA */
-.navbar {
-  background-color: #000; /* Fondo negro sólido para que no sea transparente */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 5%;
-  align-items: center;
-  position: fixed; /* Mantiene la barra fija arriba */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 2px solid var(--rojo); /* Detalle de Sonimotor */
-  box-sizing: border-box;
-}
-
-.marca { font-size: 1.5rem; font-weight: bold; }
-
-.menu-escritorio { list-style: none; display: flex; gap: 20px; }
-.menu-escritorio a { color: white; text-decoration: none; font-weight: 500; }
-
-/* DISEÑO RESPONSIVO (Móvil) */
-#menu-toggle { display: none; }
-.menu-panel {
-  position: fixed; top: 70px; left: -100%; width: 250px; height: 100%;
-  background: var(--negro); transition: 0.4s; list-style: none; padding: 20px;
-  z-index: 999;
-}
-#menu-toggle:checked ~ .menu-panel { left: 0; }
-.menu-panel a { color: white; text-decoration: none; display: block; padding: 15px 0; border-bottom: 1px solid #333; }
-
-@media (min-width: 769px) {
-  .menu-btn { display: none; }
-}
-@media (max-width: 768px) {
-  .menu-escritorio { display: none; }
-}
-
-/* PRODUCTOS Y TARJETAS */
-.contenedor-productos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
-.producto { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px); padding: 20px; border-radius: 10px; width: 280px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: 0.3s; border: 1px solid #333; }
-.producto:hover { transform: translateY(-10px); border-color: var(--rojo); }
-.producto img { width: 100%; border-radius: 5px; height: 180px; object-fit: cover; }
-
-/* FORMULARIO */
-.mi-formulario {
-  max-width: 500px; margin: 50px auto; background: rgba(255,255,255,0.9); color: black; padding: 30px; border-radius: 10px;
-  display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-.mi-formulario input, select { margin-bottom: 20px; padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
-.btn-enviar { background: var(--rojo); color: white; border: none; padding: 15px; cursor: pointer; border-radius: 5px; font-weight: bold; }
-
-.titulo-seccion { text-align: center; margin-top: 30px; color: var(--blanco); text-transform: uppercase; }
-/* VARIABLES DE COLOR */
-:root {
-  --azul: #003594;
-  --rojo: #e60000;
-  --negro: #1a1a1a;
-  --blanco: #ffffff;
-  --gris: #f4f4f4;
-}
-
-/* --- CONFIGURACIÓN DE FONDOS ESPECÍFICOS --- */
-
-/* 1. SOLO PARA INICIO: Imagen del logo Sonimotor */
+/* 3. CONFIGURACIÓN DE FONDOS POR PÁGINA */
 .pagina-inicio {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('img/inicio.jpeg'); /* Asegúrate que el nombre sea exacto */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('img/inicio.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
-/* 2. SOLO PARA MOTOS: Fondo Negro sólido */
 .pagina-motos {
-    background-color: #000000 !important;
+  background-color: #0d0909ea !important;
 }
 
-/* 3. SOLO PARA COTIZACIÓN: Fondo Azul y Rojo */
 .pagina-registro {
-    background: linear-gradient(135deg, #0c67c3 0%, #800000 100%);
-    background-attachment: fixed;
+  background: linear-gradient(135deg, var(--azul-brillante) 0%, #800000 100%);
+  background-attachment: fixed;
 }
 
-/* --- ESTILOS GENERALES Y NAVBAR --- */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding-top: 80px; 
-  color: var(--blanco);
-}
-
+/* 4. NAVBAR (Barra de Navegación) */
 .navbar {
-  background-color: #000; 
-  color: white;
+  background-color: #fb0a0a; 
   display: flex;
   justify-content: space-between;
   padding: 15px 5%;
   align-items: center;
   position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 0; width: 100%;
   z-index: 1000;
   border-bottom: 2px solid var(--rojo);
   box-sizing: border-box;
 }
 
-.marca { font-size: 1.5rem; font-weight: bold; }
+.brand-container { display: flex; align-items: center; gap: 12px; }
+.logo-nav {
+  height: 65px; width: auto;
+  border-radius: 65%;
+  border: 2px solid var(--rojo);
+  box-shadow: 0 0 10px var(--sombra-roja);
+}
+.marca { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
 
+/* 5. MENÚS (Escritorio y Móvil) */
 .menu-escritorio { list-style: none; display: flex; gap: 20px; }
-.menu-escritorio a { color: white; text-decoration: none; font-weight: 500; }
+.menu-escritorio a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.menu-escritorio a:hover { color: var(--rojo); }
 
-/* DISEÑO PARA MÓVIL */
 #menu-toggle { display: none; }
 .menu-panel {
   position: fixed; top: 70px; left: -100%; width: 250px; height: 100%;
@@ -164,106 +74,59 @@ body {
 #menu-toggle:checked ~ .menu-panel { left: 0; }
 .menu-panel a { color: white; text-decoration: none; display: block; padding: 15px 0; border-bottom: 1px solid #333; }
 
-/* CONTENEDORES DE PRODUCTOS */
+/* Responsive Menu */
+@media (min-width: 769px) { .menu-btn { display: none; } }
+@media (max-width: 768px) { .menu-escritorio { display: none; } }
+
+/* 6. HERO (Sección de Bienvenida) */
+.hero {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; text-align: center;
+  min-height: 80vh; padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.frase-contenedor h1 {
+  font-family: 'Verdana', sans-serif;
+  font-size: 3.5rem; font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(181, 22, 22, 0.832);
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 7. PRODUCTOS Y TARJETAS */
 .contenedor-productos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
 .producto { 
   background: rgba(255, 255, 255, 0.1); 
   backdrop-filter: blur(5px); 
-  padding: 20px; 
-  border-radius: 10px; 
-  width: 280px; 
-  text-align: center; 
-  border: 1px solid #333; 
+  padding: 20px; border-radius: 10px; 
+  width: 280px; text-align: center; 
+  border: 1px solid #333; transition: 0.3s;
 }
+.producto:hover { transform: translateY(-10px); border-color: var(--rojo); }
 .producto img { width: 100%; border-radius: 5px; height: 180px; object-fit: cover; }
-/* --- ESTILO PARA EL TEXTO DEL HERO (INICIO) --- */
-.hero h1 {
-    font-family: 'Verdana', sans-serif; /* Una fuente fuerte y clara */
-    font-size: 3.5rem;                  /* Letras grandes que imponen */
-    font-weight: 800;
-    text-transform: uppercase;          /* Todo en mayúsculas para más fuerza */
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-shadow: 3px 3px 10px rgba(230, 0, 0, 0.8); /* Sombra roja (color Sonimotor) */
-    margin-bottom: 10px;
-}
+.precio { display: block; margin: 15px 0; font-weight: bold; color: var(--rojo); font-size: 1.2rem; }
 
-.hero .subtitulo {
-    font-style: italic;                 /* Estilo inclinado para más elegancia */
-    font-size: 1.4rem;
-    color: #cccccc;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+/* 8. FORMULARIO DE COTIZACIÓN */
+.mi-formulario {
+  max-width: 500px; margin: 50px auto; 
+  background: rgba(255,255,255,0.95); 
+  color: black; padding: 30px; border-radius: 10px;
+  display: flex; flex-direction: column; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
+.mi-formulario label { font-weight: bold; margin-bottom: 5px; }
+.mi-formulario input, .mi-formulario select { margin-bottom: 20px; padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
+.btn-enviar { 
+  background: var(--rojo); color: rgb(246, 238, 238); border: none; 
+  padding: 15px; cursor: pointer; border-radius: 5px; 
+  font-weight: bold; text-transform: uppercase; transition: 0.3s;
+}
+.btn-enviar:hover { background: #810303; }
 
-/* Animación suave para que el texto aparezca al cargar */
-.hero {
-    animation: fadeIn 2s ease-in-out;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-/* --- ESTILO DEL LOGO EN LA NAVBAR --- */
-.brand-container {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* Espacio entre logo y texto */
-}
-
-.logo-nav {
-    height: 50px; /* Tamaño ideal para que no se mire gigante */
-    width: auto;
-    border-radius: 50%; /* Lo hace circular */
-    border: 2px solid #e60000; /* Borde rojo Sonimotor */
-    box-shadow: 0 0 10px rgba(230, 0, 0, 0.5);
-}
-
-/* --- ESTILO DE LA FRASE CHILERA --- */
-.frase-contenedor h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    margin-bottom: 0;
-    color: #fff;
-    text-shadow: 2px 2px 0px hsl(0, 7%, 61%); /* Sombra roja sólida */
-}
-
-.frase-chilera {
-    font-family: 'Georgia', serif;
-    font-size: 1.8rem;
-    font-style: italic;
-    color: #f2f6fa; /* Color dorado para que resalte la frase principal */
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-.subtitulo {
-    font-size: 1.2rem;
-    color: #ddd;
-    letter-spacing: 1px;
-}
-
-/* Ajuste del Hero para centrar todo */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 80vh;
-    padding: 20px;
-}
-@media (max-width: 600px) {
-    /* Esto esconde los enlaces de texto (Inicio, Motos, Repuestos) */
-    nav a {
-        display: none; 
-    }
-
-    /* Esto asegura que el icono de las tres rayitas sea el que se vea */
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-}
+.titulo-seccion { text-align: center; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; }
