@@ -95,7 +95,7 @@ body {
 
 .contenedor-productos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
 .producto { 
-  background: rgba(255, 255, 255, 0.1); 
+  background: rgba(31, 179, 169, 0.536); 
   backdrop-filter: blur(5px); 
   padding: 20px; border-radius: 10px; 
   width: 280px; text-align: center; 
@@ -122,3 +122,10 @@ body {
 .btn-enviar:hover { background: #810303; }
 
 .titulo-seccion { text-align: center; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; }
+
+.linea-separadora {
+    height: 6px;
+    width: 500px;
+    background-color: #dd1717;
+    margin: 40px auto;
+}
