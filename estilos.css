@@ -1,4 +1,4 @@
-/* 1. VARIABLES DE COLOR (Únicas y organizadas) */
+
 :root {
   --azul: #03225b;
   --azul-brillante: #0c67c3;
@@ -9,19 +9,17 @@
   --sombra-roja: rgba(230, 0, 0, 0.5);
 }
 
-/* 2. ESTILOS GENERALES */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding-top: 80px; /* Espacio para la navbar fija */
+  padding-top: 80px; 
   color: var(--blanco);
-  background-color: #000; /* Fondo base negro */
+  background-color: #000; 
 }
 
-/* 3. CONFIGURACIÓN DE FONDOS POR PÁGINA */
 .pagina-inicio {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('img/inicio.jpeg');
+             url('img/inicio.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -37,7 +35,6 @@ body {
   background-attachment: fixed;
 }
 
-/* 4. NAVBAR (Barra de Navegación) */
 .navbar {
   background-color: #fb0a0a; 
   display: flex;
@@ -60,7 +57,6 @@ body {
 }
 .marca { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
 
-/* 5. MENÚS (Escritorio y Móvil) */
 .menu-escritorio { list-style: none; display: flex; gap: 20px; }
 .menu-escritorio a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
 .menu-escritorio a:hover { color: var(--rojo); }
@@ -74,11 +70,9 @@ body {
 #menu-toggle:checked ~ .menu-panel { left: 0; }
 .menu-panel a { color: white; text-decoration: none; display: block; padding: 15px 0; border-bottom: 1px solid #333; }
 
-/* Responsive Menu */
 @media (min-width: 769px) { .menu-btn { display: none; } }
 @media (max-width: 768px) { .menu-escritorio { display: none; } }
 
-/* 6. HERO (Sección de Bienvenida) */
 .hero {
   display: flex; flex-direction: column; align-items: center;
   justify-content: center; text-align: center;
@@ -99,7 +93,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 7. PRODUCTOS Y TARJETAS */
 .contenedor-productos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
 .producto { 
   background: rgba(255, 255, 255, 0.1); 
@@ -112,7 +105,6 @@ body {
 .producto img { width: 100%; border-radius: 5px; height: 180px; object-fit: cover; }
 .precio { display: block; margin: 15px 0; font-weight: bold; color: var(--rojo); font-size: 1.2rem; }
 
-/* 8. FORMULARIO DE COTIZACIÓN */
 .mi-formulario {
   max-width: 500px; margin: 50px auto; 
   background: rgba(255,255,255,0.95); 
