@@ -124,8 +124,8 @@ body {
 .titulo-seccion { text-align: center; margin-top: 30px; text-transform: uppercase; letter-spacing: 2px; }
 
 .linea-separadora {
-    height: 6px;
-    width: 500px;
+    height: 3px;
+    width: 250px;
     background-color: #dd1717;
     margin: 40px auto;
 }
