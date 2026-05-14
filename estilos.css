@@ -84,7 +84,7 @@ body {
   font-family: 'Verdana', sans-serif;
   font-size: 3.5rem; font-weight: 900;
   text-transform: uppercase;
-  text-shadow: 3px 3px 10px rgba(181, 22, 22, 0.832);
+  text-shadow: 3px 3px 10px rgba(94, 6, 6, 0.832);
   margin-bottom: 10px;
 }
 
@@ -104,6 +104,13 @@ body {
 .producto:hover { transform: translateY(-10px); border-color: var(--rojo); }
 .producto img { width: 100%; border-radius: 5px; height: 180px; object-fit: cover; }
 .precio { display: block; margin: 15px 0; font-weight: bold; color: var(--rojo); font-size: 1.2rem; }
+
+
+.producto .link-red {
+    margin: 9px 0; 
+    width: 80%;     
+    text-align: center;
+}
 
 .mi-formulario {
   max-width: 500px; margin: 50px auto; 
@@ -128,4 +135,33 @@ body {
     width: 250px;
     background-color: #dd1717;
     margin: 40px auto;
+}
+
+.redes-sociales {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.redes-sociales p {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.link-red {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: var(--rojo); 
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.link-red:hover {
+  background-color: #b30000; 
+  transform: scale(1.1); 
 }
